@@ -91,6 +91,29 @@ systemctl --user status top-memory-threshold-killer
 
 ---
 
+Here is a log example : 
+
+```bash
+
+--------------------------------------------------
+[ALERT] 2026-02-21 00:53:17 |  641218 1256120 Isolated Web Co /usr/lib/firefox-esr/firefox-esr -contentproc -isForBrowser -prefsHandle 0:46254 -prefMapHandle 1:277392 -jsInitHandle 2:242716 -parentBuildID 20251009121631 -sandboxReporter 3 -chrootClient 4 -ipcHandle 5 -initialChannelId {78cefbb2-e65f-44a1-9b94-4175f16e0082} -parentPid 340735 -crashReporter 6 -crashHelper 7 -greomni /usr/lib/firefox-esr/omni.ja -appomni /usr/lib/firefox-esr/browser/omni.ja -appDir /usr/lib/firefox-esr/browser 103 tab
+User              : yassine
+Working directory : 
+Executed file     : /usr/lib/firefox-esr/firefox-esr
+Command line      : /usr/lib/firefox-esr/firefox-esr -contentproc -isForBrowser -prefsHandle 0:46254 -prefMapHandle 1:277392 -jsInitHandle 2:242716 -parentBuildID 20251009121631 -sandboxReporter 3 -chrootClient 4 -ipcHandle 5 -initialChannelId {78cefbb2-e65f-44a1-9b94-4175f16e0082} -parentPid 340735 -crashReporter 6 -crashHelper 7 -greomni /usr/lib/firefox-esr/omni.ja -appomni /usr/lib/firefox-esr/browser/omni.ja -appDir /usr/lib/firefox-esr/browser 103 tab 
+Parent            : 340735 -> firefox-esr     /usr/lib/firefox-esr/firefox-esr
+Trigger           : Unknown or indirect trigger
+Fork count        : 0
+Parent process tree:
+->  641218  340735 Isolated Web Co /usr/lib/firefox-esr/firefox-esr -contentproc -isForBrowser -prefsHandle 0:46254 -prefMapHandle 1:277392 -jsInitHandle 2:242716 -parentBuildID 20251009121631 -sandboxReporter 3 -chrootClient 4 -ipcHandle 5 -initialChannelId {78cefbb2-e65f-44a1-9b94-4175f16e0082} -parentPid 340735 -crashReporter 6 -crashHelper 7 -greomni /usr/lib/firefox-esr/omni.ja -appomni /usr/lib/firefox-esr/browser/omni.ja -appDir /usr/lib/firefox-esr/browser 103 tab
+->  340735    8321 firefox-esr     /usr/lib/firefox-esr/firefox-esr
+->    8321       1 systemd         /usr/lib/systemd/systemd --user
+--------------------------------------------------
+
+```
+
+---
+
 Will be added later : 
 
 * Turn it into a proper daemon tool
