@@ -4,7 +4,7 @@ Have you ever found your machine completely frozen less than one minute after bo
 
 Have you ever watched your system crash while a rogue process kept allocating RAM without limits?
 
-I built this tool after a Webkernel application with aggressive background tasks saturated my memory in under a minute after startup. The machine became unusable. Everything crashed. It drove me insane. This script was born out of that nightly frustration.
+I built this tool after a misconfigured development schedule caused runaway memory usage. Sometimes it was Webkernel tasks, other times browsers like Brave or Mizalla consuming excessive RAM. In all cases, the machine became unusable. Everything crashed. It drove me insane. This script was born out of that nightly frustration.
 
 Top Memory Threshold Killer continuously monitors memory usage and immediately terminates the highest memory-consuming eligible process when it exceeds a defined RSS threshold.
 
